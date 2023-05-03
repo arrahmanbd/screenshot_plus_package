@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 class ScreenshotPlus {
 	/// Comunication property to talk to the native background code.
 	static const MethodChannel _channel =
-			const MethodChannel('screenshot_plus');
+			MethodChannel('screenshot_plus');
 
 	/// Captures everything as is shown in user's device.
 	static Future<String?> takeShot() async {

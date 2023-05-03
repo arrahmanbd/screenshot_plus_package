@@ -4,21 +4,20 @@ import 'package:screenshot_plus/screenshot_plus.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
+
+
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
-  File imageFile = File('');
-  @override
-  void initState() {
-    super.initState();
-  } // initState()
-
+   File imageFile = File('');
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,13 +25,13 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Screenshot Plus'),
+          title: const Text('Screenshot Plus'),
         ),
         bottomNavigationBar: ButtonBar(
           alignment: MainAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              child: Text('Clear'),
+              child: const Text('Clear'),
               onPressed: () {
                 imageFile = File('');
                 setState(() {});
@@ -41,13 +40,13 @@ class _MyAppState extends State<MyApp> {
           ],
         ),
         body: Container(
-          constraints: BoxConstraints.expand(),
+          constraints: const BoxConstraints.expand(),
           child: imageFile.isAbsolute
               ? Container(
-                  padding: EdgeInsets.all(30),
+                  padding: const EdgeInsets.all(30),
                   color: Colors.blueGrey[900],
                   child: Image.file(imageFile))
-              : Icon(Icons.image),
+              : const Icon(Icons.image),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () async {
@@ -59,9 +58,10 @@ class _MyAppState extends State<MyApp> {
             imageFile = File(path);
             setState(() {});
           },
-          child: Icon(Icons.camera),
+          child: const Icon(Icons.camera),
         ),
       ),
     );
-  } // build()
-} // _MyAppState
+
+  }
+}
