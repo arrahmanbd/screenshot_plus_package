@@ -1,3 +1,7 @@
+## 0.0.2
+
+### Alpha Release
+- Build Error Fixed
 
 ## 0.0.1
 
