@@ -143,11 +143,10 @@ public class ScreenshotPlusPlugin implements MethodCallHandler, FlutterPlugin, A
 			return;
 		} // if not implemented
 
-		// Need to fix takeShot()
-		// it produces just a black image
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 			// takeShot();
-			takeShot();
+			// it produces just a black image so using Old untill fixedfor 13
+			takeShotOld();
 		} else {
 			takeShotOld();
 		} // if
@@ -176,20 +175,20 @@ public class ScreenshotPlusPlugin implements MethodCallHandler, FlutterPlugin, A
 		} catch (Exception ex) {
 			Log.e(TAG, "Error getting package info", ex);
 		}
-	
+
 		String appName = null;
 		if (appInfo != null) {
 			CharSequence cs = this.context.getPackageManager().getApplicationLabel(appInfo);
 			appName = cs.toString().trim();
 		}
-	
+
 		if (appName == null || appName.isEmpty()) {
 			appName = this.context.getPackageName();
 		}
-	
+
 		return appName;
 	}
-	
+
 	private String getScreenshotPath() {
 		String externalDir = getOrCreateDocDirectory();
 		String sDir = externalDir
@@ -350,29 +349,28 @@ public class ScreenshotPlusPlugin implements MethodCallHandler, FlutterPlugin, A
 			Log.println(Log.INFO, TAG, "Permission to write false due to version codes.");
 			return false;
 		}
-	
+
 		if (this.activity == null) {
 			Log.println(Log.INFO, TAG, "Activity is null. Cannot check permission.");
 			return false;
 		}
-	
+
 		int perm = this.activity.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
-	
+
 		if (perm == PackageManager.PERMISSION_GRANTED) {
 			Log.println(Log.INFO, TAG, "Permission to write granted!");
 			return true;
 		}
-	
+
 		Log.println(Log.INFO, TAG, "Requesting permissions...");
 		this.activity.requestPermissions(
-				new String[]{
+				new String[] {
 						Manifest.permission.WRITE_EXTERNAL_STORAGE
 				},
-				11
-		);
-	
+				11);
+
 		Log.println(Log.INFO, TAG, "No permissions :(");
 		return false;
 	}
-	
+
 } // ScreenshotPlusPlugin

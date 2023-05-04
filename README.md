@@ -1,24 +1,24 @@
 ## screenshot_plus
 <p align="center">  
-  <a href="https://github.com/iamSahdeep/liquid_swipe_flutter/releases" <img height="20" alt="GitHub All Releases" src="https://img.shields.io/github/downloads/iamSahdeep/liquid_swipe_flutter/total.svg?style=for-the-badge">
+  <a href="https://github.com/arrahmanbd/screenshot_plus/releases" <img height="20" alt="GitHub All Releases" src="https://img.shields.io/github/downloads/arrahmanbd/screenshot_plus/total.svg?style=for-the-badge">
   </a>
-  <a href="https://www.codacy.com/app/iamSahdeep/liquid_swipe_flutter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=iamSahdeep/liquid_swipe_flutter&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/ccdaffb33883461b8570cd80f5051631"/>
+  <a href=""><img src="https://api.codacy.com/project/badge/Grade/ccdaffb33883461b8570cd80f5051631"/>
   </a>
-  <a href="https://pub.dev/packages/liquid_swipe"> <img height="20" alt="Pub" src="https://img.shields.io/pub/v/liquid_swipe.svg?style=for-the-badge">
+  <a href=""> <img height="20" alt="Pub" src="https://img.shields.io/pub/v/liquid_swipe.svg?style=for-the-badge">
   </a>
-  <a href="https://github.com/iamSahdeep/liquid_swipe_flutter/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-APACHE2.0-blue.svg?longCache=true&style=flat-square">
+  <a href="https://github.com/arrahmanbd/screenshot_plus/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-APACHE2.0-blue.svg?longCache=true&style=flat-square">
   </a>
   <a href="https://flutter.dev"><img src="https://img.shields.io/badge/Built%20for-Flutter-blue.svg?longCache=true&style=flat-square" ">
   </a>
-  <a href="https://github.com/Solido/awesome-flutter">
-   <img alt="Awesome Flutter" src="https://img.shields.io/badge/Android-13-blue.svg?longCache=true&style=flat-square" />
+  <a href="https://github.com/arrahmanbd">
+   <img alt="Android 12" src="https://img.shields.io/badge/Android-12-green.svg?longCache=true&style=flat-square" />
   </a>
-  <a href="https://codecov.io/gh/iamSahdeep/liquid_swipe_flutter">
-  <img src="https://codecov.io/gh/iamSahdeep/liquid_swipe_flutter/branch/master/graph/badge.svg?token=lGlgjaHbqJ"/>
+  <a href="">
+  <img src="https://codecov.io/gh/arrahmanbd/screenshot_plus/branch/master/graph/badge.svg?token=lGlgjaHbqJ"/>
   </a>
 </p>
 Screenshot Plus is a Dart package for taking screenshots on Android and iOS. This package provides a simple API to capture the current screen and save it as an image file in the device's storage. 
-The captured image can then be used for various purposes such as sharing, printing, or analyzing app behavior. The package is easy to use and integrates seamlessly with existing Flutter projects. This plugin saves the image and returns the path. Also working on any version of **Android** or **iOS**.
+The captured image can then be used for various purposes such as sharing, printing, or analyzing app behavior. The package is easy to use and integrates seamlessly with existing Flutter projects. This plugin saves the image and returns the path. Also working on almost all version of **Android** or **iOS**.
 </br>
 <p align="center">
 <img src="https://raw.githubusercontent.com/arrahmanbd/screenshot_plus_package/master/Preview/preview.png" width="310" height="640">
@@ -77,18 +77,19 @@ and take a screenshot:
 
 ```
 //Get the absolute path
-String path = await ScreenshotPlus.takeShot() ?? '';
-debugPrint('Screenshot taken @: $path');
+String path = await ScreenshotPlus.takeShot();
+debugPrint('Screenshot taken: $path');
 ```
 
 In error case the function returns `empty path` to Show the captured image use this widget
 
 ```
-//image Filepath is the absolute file path
+//imageFilepath is the absolute File(path)
 Image.file(imageFilepath)
 ```
 
 
 ## 🔗 Follow
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://arrahmanbd.github.io/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/arrahmanbd)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/arrahmanbd)
+[![linkedin](https://img.shields.io/badge/Github-22272e?style=for-the-badge&logo=github&logoColor=white)](https://www.github.com/arrahmanbd)

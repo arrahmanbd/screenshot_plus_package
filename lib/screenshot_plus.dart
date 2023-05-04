@@ -9,9 +9,8 @@ class ScreenshotPlus {
 			MethodChannel('screenshot_plus');
 
 	/// Captures everything as is shown in user's device.
-	static Future<String?> takeShot() async {
-		final String? path = await _channel.invokeMethod('takeShot');
-
+	static Future<String> takeShot() async {
+		final String path = await _channel.invokeMethod('takeShot')??'';
 		return path;
 	} // takeScreenshot()
 } // NativeScreenshot

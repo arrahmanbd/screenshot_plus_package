@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
           onPressed: () async {
             debugPrint('Screen shot captured');
             //Get the absolute path
-            String path = await ScreenshotPlus.takeShot() ?? '';
+            String path = await ScreenshotPlus.takeShot();
             debugPrint('Screenshot taken @: $path');
 
             imageFile = File(path);
