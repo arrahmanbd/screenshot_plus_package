@@ -1,4 +1,4 @@
-package jpg.ivan.screenshot_plus;
+package com.himu.screenshot_plus;
 
 import android.Manifest;
 import android.app.Activity;
@@ -374,5 +374,5 @@ public class ScreenshotPlusPlugin implements MethodCallHandler, FlutterPlugin, A
 		Log.println(Log.INFO, TAG, "No permissions :(");
 		return false;
 	}
-	// permissionToWrite()
+	
 } // ScreenshotPlusPlugin
