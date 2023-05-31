@@ -21,8 +21,8 @@ Screenshot Plus is a Dart package for taking screenshots on Android and iOS. Thi
 The captured image can then be used for various purposes such as sharing, printing, or analyzing app behavior. The package is easy to use and integrates seamlessly with existing Flutter projects. This plugin saves the image and returns the path. Also working on almost all version of **Android** or **iOS**.
 </br>
 <p align="center">
-<img src="https://raw.githubusercontent.com/arrahmanbd/screenshot_plus_package/master/Preview/preview.png" width="310" height="640">
-<img src="https://raw.githubusercontent.com/arrahmanbd/screenshot_plus_package/master/Preview/preview.png" width="310" height="640">
+<img src="https://raw.githubusercontent.com/arrahmanbd/screenshot_plus_package/master/Preview/preview.png" width="320" height="640">
+<img src="https://raw.githubusercontent.com/arrahmanbd/screenshot_plus_package/master/Preview/preview.png" width="320" height="640">
 </p>
 
 ## Instalation
